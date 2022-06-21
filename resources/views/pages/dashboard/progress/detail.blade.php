@@ -43,7 +43,10 @@
                                                   <span class="font-bold">Tugas :</span>   {{ $item->Materi->tugas_materi ?? '' }}
                                                 </p>
                                                 <p class="mb-3 text-sm font-medium text-gray-700">
-                                                    <span class="font-bold">Upload :</span> {{ $item->created_at->format('d M Y') ?? '' }}
+                                                    <span class="font-bold mr-5">Upload :</span> {{ $item->created_at->format('d M Y') ?? '' }} <a href="" class="px-3 ml-5 py-2 mt-2 text-green-500 hover:text-gray-800">
+                                                        <i class="fas fa-edit fa-lg"></i> <span class="">Riview</span>
+                                                        
+                                                    </a>
                                                 </p>
                                                 
 

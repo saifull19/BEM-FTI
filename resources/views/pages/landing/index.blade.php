@@ -18,27 +18,27 @@
                         class="lg:flex-grow lg:w-1/2 flex flex-col lg:items-start lg:text-left mb-3 md:mb-12 lg:mb-0 items-center">
                         <h1
                             class="text-black-1 lg:leading-normal sm:text-4xl lg:text-5xl text-3xl mb-5 font-semibold lg:mt-20">
-                            Bangun Karir Impianmu <br class="lg:block hidden">
-                            Bersama UWHcamp
+                            Badan Eksekutif Mahasiswa <br class="lg:block hidden">
+                            Fakultas Teknologi Informasi
                         </h1>
 
                         <p class="text-lg leading-relaxed text-serv-text font-light tracking-wide mb-10 lg:mb-18 ">
-                            UWHcamp mentransformasi para pemula   <br class="lg:block hidden">
-                            untuk menjadi digital talent terbaik di Indonesia <br class="lg:block hidden">
-                            yang siap bekerja.
+                            BEM Fakultas Teknologi Informasi   <br class="lg:block hidden">
+                            Universitas KH. Abdul Wahab Chasbulloh <br class="lg:block hidden">
+                            Tambak-Beras Jombang.
                         </p>
                         
                         <div
                             class="md:flex contents items-center mx-auto lg:mx-0 lg:flex justify-center lg:space-x-8 md:space-x-2 space-x-0">
                             <a href="{{ route('explore.landing') }}" class="bg-serv-button text-white text-lg font-semibold py-4 px-12 my-2 rounded-lg">
-                                Get Started
+                                Explore Now!
                             </a>
                         </div>
                     </div>
                     <!-- Right Column -->
-                    <div class="w-full lg:w-1/2 text-center lg:justify-start justify-center flex pr-0">
-                        <img class="bottom-0 lg:block lg:right-24 md:right-16 sm:right-8 right-8 w-75"
-                            src="{{ asset('/assets/hero-image.png') }}" alt="" />
+                    <div  class="w-full lg:w-1/2 text-center lg:justify-start justify-center flex pr-0">
+                        <img style="margin-left: 250px" class="bottom-0 lg:block lg:right-24 md:right-16 sm:right-8 right-8 w-75"
+                            src="{{ asset('/assets/unwaha.png') }}" alt="" />
                     </div>
                 </div>
                 
@@ -54,7 +54,7 @@
                    
                     <div class="flex flex-col w-full mb-5">
                         <h1 class="md:text-4xl text-3xl tracking-wider font-semibold mb-5 text-medium-black">
-                            Keunggulan Belajar Di UWHcamp</h1>
+                            Article Himpunan Mahasiswa Prodi</h1>
                     </div>
                    
                     <div class="flex justify-center lg:flex-row flex-col items-center pb-1 ">

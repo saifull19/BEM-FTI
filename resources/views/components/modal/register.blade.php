@@ -12,13 +12,13 @@
                     Sign up to 
                 </h3>
 
-                <a class="pl-10" href="{{ route('index') }}">
-                    <div class="pl-10">
-                        <img src="{{ asset('/assets/images/logo.png') }}" alt="" class=" pl-10">
+                <a class="" href="{{ route('index') }}">
+                    <div style="margin-left: 130px">
+                        <img src="{{ asset('/assets/images/logo.png') }}" alt="" class="">
                     </div>
                </a>
 
-                <p class="text-gray-400 mt-1 text-sm">
+                <p class="text-gray-400 mt-2 text-sm">
                     Join UWHcamp and start your real project
                 </p>
 

@@ -16,13 +16,10 @@ class UserRolesSeeder extends Seeder
     {
         DB::table('user_roles')->insert([
             [
-                'role_user' => 'Administrator'
+                'role_user' => 'BEM FTI'
             ],
             [
-                'role_user' => 'Mentor'
-            ],
-            [
-                'role_user' => 'Tutor'
+                'role_user' => 'HMP'
             ],
             [
                 'role_user' => 'Member'

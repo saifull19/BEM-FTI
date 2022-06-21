@@ -9,12 +9,12 @@
             <h3 class="text-2xl font-semibold">
                 Log in to 
             </h3>
-            <a class="ml-5 pl-10" href="{{ route('index') }}">
-                    <div class="pl-10">
-                        <img src="{{ asset('/assets/images/logo.png') }}" alt="" class="ml-5 pl-10">
+            <a class="" href="{{ route('index') }}">
+                    <div style="margin-left: 130px">
+                        <img style="width: 100px; height: 100px;"  src="{{ asset('/assets/images/logo.png') }}" alt="" class="">
                     </div>
             </a>
-            <p class="text-gray-400 mt-1 text-sm">
+            <p class="text-gray-400 mt-2 text-sm">
                 Enter your email & password to continue
             </p>
         </div>

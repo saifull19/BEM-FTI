@@ -2,7 +2,7 @@
     <div class=" text-gray-500 dark:text-gray-400">
 
         <a class="ml-6" href="{{ route('index') }}">
-            <img src="{{ asset('/assets/images/logo.png') }}" alt="" class="ml-6">
+            <img style="width: 100px; height: 100px; margin-left: 80px;" src="{{ asset('/assets/images/logo.png') }}" alt="" class="ml-6">
         </a>
 
         <div class="flex items-center pt-5 pl-5 mt-10 space-x-2 border-t border-gray-100">

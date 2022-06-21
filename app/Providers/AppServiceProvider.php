@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
             return $user->user_role_id === 2;
         });
         Gate::define('member', function(User $user) {
-            return $user->user_role_id === 4;
+            return $user->user_role_id === 3;
         });
     }
 }

@@ -124,6 +124,6 @@ Route::group(['prefix' => 'member', 'as' => 'member.', 'middleware' => ['auth:sa
 
 // route socialite
 Route::get('sign-in-google', [UserController::class, 'google'])->name('user.login.google');
-Route::get('auth/google', [UserController::class, 'handleProviderCallback'])->name('user.google.callback');
+Route::get('auth/google/callback', [UserController::class, 'handleProviderCallback'])->name('user.google.callback');
 
 

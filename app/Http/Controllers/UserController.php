@@ -59,7 +59,7 @@ class UserController extends Controller
                 $detail_user->save();
 
             // setelah simpan ke database kita kirim email
-            Mail::to($user->email)->send(new AfterRegister($user));
+            // Mail::to($user->email)->send(new AfterRegister($user));
         }
 
         Auth::login($user, true);

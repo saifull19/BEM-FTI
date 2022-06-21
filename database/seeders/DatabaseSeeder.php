@@ -20,10 +20,10 @@ class DatabaseSeeder extends Seeder
             // DetailUserTableSeeder::class,
             // OrderStatusTableSeeder::class,
             // CategoryTableSeeder::class,
-            // UserRolesSeeder::class,
+            UserRolesSeeder::class,
             // MenuTableSeeder::class,
             // WebinarStatusSeeder::class,
-            AksesTableSeeder::class
+            // AksesTableSeeder::class
         ]);
     }
 }
