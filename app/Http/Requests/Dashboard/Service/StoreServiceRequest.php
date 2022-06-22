@@ -29,10 +29,10 @@ class StoreServiceRequest extends FormRequest
         return [
             'title' => ['required', 'string', 'max:255'],
             'slug' => ['required', 'string', 'max:255', 'unique:service'],
-            'category_id' => ['required'],
+            'category_id' => ['nullable'],
             'description' => ['nullable', 'string', 'max:5000'],
-            'delivery_time' => ['required', 'integer', 'max:100'],
-            'revision_limit' => ['required', 'integer', 'max:100'],
+            'delivery_time' => ['required', 'string', 'max:100'],
+            'revision_limit' => ['required', 'string', 'max:100'],
             'price' => ['required', 'string'],
             'note' => ['nullable', 'string', 'max:5000']
 

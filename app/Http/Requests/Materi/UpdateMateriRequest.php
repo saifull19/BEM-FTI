@@ -25,8 +25,8 @@ class UpdateMateriRequest extends FormRequest
     {
         return [
             'title' => 'required|string|max:255',
-            'tugas_materi' => 'string|max:255',
-            'url' => 'required|max:100'
+            // 'tugas_materi' => 'string|max:255',
+            'url' => 'required|string|max:5000'
         ];
     }
 }

@@ -4,7 +4,7 @@
 
         @include('includes.dashboard.meta')
 
-        <title>@yield('title') | UWHcamp</title>
+        <title>@yield('title') | BEM FTI</title>
 
         @stack('before-style')
 

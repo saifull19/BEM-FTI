@@ -34,7 +34,7 @@
 
                                 @endif
 
-                                    Halo, {{ Auth::user()->name }}
+                                    {{ Auth::user()->name }}
 
                                 </button>
 
@@ -61,7 +61,7 @@
 
                                         <p class="text-sm text-left text-gray-500">
                                             All <br class="hidden lg:block">
-                                            Request
+                                            HMP SI - IF
                                         </p>
 
                                     </div>
@@ -76,7 +76,7 @@
                                         <p class="mt-2 text-2xl font-semibold text-left text-gray-800">{{ $completed ?? '' }}</p>
 
                                         <p class="text-sm text-left text-gray-500">
-                                            All  <br class="hidden lg:block">Services
+                                            All  <br class="hidden lg:block">Gallery
                                         </p>
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
                                         <p class="mt-2 text-2xl font-semibold text-left text-gray-800">{{ $freelancer ?? '' }}</p>
 
                                         <p class="text-sm text-left text-gray-500">
-                                            All <br class="hidden lg:block">Members
+                                            All <br class="hidden lg:block">BEM FTI
                                         </p>
 
                                     </div>
@@ -431,8 +431,8 @@
                                         </div>
                                         <p class="mt-2 text-2xl font-semibold text-left text-gray-800">{{ $progresss ?? '' }}</p>
                                         <p class="text-sm text-left text-gray-500">
-                                            Services <br class="hidden lg:block">
-                                            On Progress
+                                            All <br class="hidden lg:block">
+                                            Gallery
                                         </p>
                                     </div>
                                 </div>
@@ -443,8 +443,8 @@
                                         </div>
                                         <p class="mt-2 text-2xl font-semibold text-left text-gray-800">{{ $completedd ?? '' }}</p>
                                         <p class="text-sm text-left text-gray-500">
-                                            Services <br class="hidden lg:block">
-                                            Completed
+                                            All <br class="hidden lg:block">
+                                            Member HMP SI - IF
                                         </p>
                                     </div>
                                 </div>
@@ -455,8 +455,8 @@
                                         </div>
                                         <p class="mt-2 text-2xl font-semibold text-left text-gray-800">{{ $freelancerr ?? '' }}</p>
                                         <p class="text-sm text-left text-gray-500">
-                                            New Freelancer <br class="hidden lg:block">
-                                            Work for You
+                                            All <br class="hidden lg:block">
+                                            Member BEM FTI
                                         </p>
                                     </div>
                                 </div>
@@ -464,17 +464,17 @@
                             <div class="p-6 mt-8 bg-white rounded-xl">
                                 <div>
                                     <h2 class="mb-1 text-xl font-semibold">
-                                        Latest Orders
+                                        Latest Overview
                                     </h2>
                                     <p class="text-sm text-gray-400">
-                                        {{ $progress ?? '' }} Total Orders On Progress
+                                        {{ $progress ?? '' }} Total Member
                                     </p>
                                 </div>
                                 <table class="w-full mt-4" aria-label="Table">
                                     <thead>
                                         <tr class="text-sm font-normal text-left text-gray-900 border-b border-b-gray-600">
                                             <th class="py-4" scope="">Name</th>
-                                            <th class="py-4" scope="">Services Name</th>
+                                            <th class="py-4" scope="">Ketua Organisasi</th>
                                             <th class="py-4" scope="">Deadline</th>
                                         </tr>
                                     </thead>

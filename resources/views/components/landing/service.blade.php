@@ -51,11 +51,11 @@
         <div class="text-center mt-5 flex justify-between w-full">
             <span
                 class="text-serv-text mr-3 inline-flex items-center leading-none text-md py-1 ">
-                Price starts from:
+                Ketua Pelaksana
             </span>
             <span
                 class="text-serv-button inline-flex items-center leading-none text-md font-semibold">
-               Rp. {{ number_format($service->price) ?? '' }}
+               {{ $service->price ?? '' }}
             </span>
         </div>
     </div>

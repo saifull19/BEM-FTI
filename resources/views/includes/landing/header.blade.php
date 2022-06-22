@@ -4,7 +4,7 @@
         <div class=" mx-auto flex flex-wrap flex-row items-center justify-between">
 
             <a href="{{ route('index') }}" class="flex items-center">
-                <img style="width: 100px; height: 100px;" src="{{ asset('/assets/images/logo.png') }}" alt="" class="ml-6">
+                <img style="width: 70px; height: 70px;" src="{{ asset('/assets/images/logo.png') }}" alt="" class="ml-6">
             </a>
             
             <label for="menu-toggle" class="cursor-pointer lg:hidden block">
@@ -22,15 +22,15 @@
                 id="menu">
                 <nav class="lg:space-x-12 space-x-0 lg:flex items-center justify-between text-base pt-8 lg:pt-0 lg:space-y-0 space-y-6">
 
-                    <a href="{{ route('index') }}" class="block hover:text-gray-900 {{ request()->is('/') ? 'nav-link active font-medium' : 'nav-link text-serv-text' }}">Home</a>
+                    <a href="{{ route('index') }}" class="block hover:text-gray-900 {{ request()->is('/') ? 'nav-link active font-medium' : 'nav-link text-serv-text' }}">BEM FTI</a>
 
-                    <a href="{{ route('explore.landing') }}" class="block hover:text-gray-900 {{ ($active === "explore") ? 'nav-link active font-medium' : 'nav-link text-serv-text' }}">Article</a>
+                    <a href="{{ route('explore.landing') }}" class="block hover:text-gray-900 {{ ($active === "explore") ? 'nav-link active font-medium' : 'nav-link text-serv-text' }}">Gallery</a>
 
-                    <a href="{{ route('profesional.landing') }}" class="block hover:text-gray-900 {{ ($active === "profesional") ? 'nav-link active font-medium' : 'nav-link text-serv-text' }}">Professional </a>
+                    <a href="{{ route('profesional.landing') }}" class="block hover:text-gray-900 {{ ($active === "profesional") ? 'nav-link active font-medium' : 'nav-link text-serv-text' }}">Program Kerja </a>
 
-                    <a href="{{ route('corporate.landing') }}" class="block nav-link text-serv-text hover:text-gray-900">Corporate</a>
+                    <a href="{{ route('corporate.landing') }}" class="block nav-link text-serv-text hover:text-gray-900">Organisasi</a>
 
-                    <a href="{{ route('create') }}" class="block hover:text-gray-900 {{ ($active === "profesional") ? 'nav-link active font-medium' : 'nav-link text-serv-text' }}">About</a>
+                    <a href="{{ route('create') }}" class="block hover:text-gray-900 {{ ($active === "profesional") ? 'nav-link active font-medium' : 'nav-link text-serv-text' }}">Profile</a>
 
                     @auth
 

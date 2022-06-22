@@ -18,7 +18,7 @@
             rel="stylesheet"
             href="{{ url('https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css') }}"
         />
-        <title>Landing | Tailwind Starter Kit by Creative Tim</title>
+        <title>Organisasi | BEM FTI</title>
     </head>
 
     <body class="text-gray-800 antialiased">

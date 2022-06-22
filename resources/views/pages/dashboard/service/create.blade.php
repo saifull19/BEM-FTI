@@ -9,11 +9,11 @@
                         <div class="col-span-12">
 
                             <h2 class="mt-8 mb-1 text-2xl font-semibold text-gray-700">
-                                Add Your Bootcamp
+                                Add Your Gallery
                             </h2>
 
                             <p class="text-sm text-gray-400">
-                                Upload the Bootcamps you provide
+                                Upload the Gallerys you provide
                             </p>
 
                         </div>
@@ -25,14 +25,14 @@
                     <ol class="inline-flex p-0 list-none">
 
                         <li class="flex items-center">
-                            <a href="{{ route('member.service.index') }}" class="text-gray-400">My Bootcamp</a>
+                            <a href="{{ route('member.service.index') }}" class="text-gray-400">My Gallery</a>
                             <svg class="w-3 h-3 mx-3 text-gray-400 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                 <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
                             </svg>
                         </li>
 
                         <li class="flex items-center">
-                            <a href="#" class="font-medium">Add Your Bootcamp</a>
+                            <a href="#" class="font-medium">Add Your Gallery</a>
                         </li>
 
                     </ol>
@@ -53,12 +53,12 @@
 
                                                 <div class="col-span-6 -mb-6">
 
-                                                    <label for="title" class="block mb-3 font-medium text-gray-700 text-md">Judul Bootcamp</label>
+                                                    <label for="title" class="block mb-3 font-medium text-gray-700 text-md">Tema</label>
 
                                                 </div>
 
                                                 <div class="col-span-6 sm:col-span-3">
-                                                    <input placeholder="Service apa yang ingin kamu tawarkan?" type="text" name="title" id="title" autocomplete="title" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('title') }}" required>
+                                                    <input placeholder="Tema Kegiatan yang dilaksanakan" type="text" name="title" id="title" autocomplete="title" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('title') }}" required>
 
                                                     @if ($errors->has('title'))
                                                         <p class="text-red-500 mb-3 text-sm">{{ $errors->first('title') }}</p>
@@ -66,26 +66,15 @@
 
                                                 </div>
 
+
                                                 <div class="col-span-6 sm:col-span-3">
+                                                    
+                                                    
 
-                                                    <select id="category" name="category_id" autocomplete="category" class="block w-full px-3 py-3 pr-10 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
-                                                        
-                                                        <option>Category Bootcamp</option>
-                                                        
-                                                        @foreach ($category as $ctg)
-                                                            @if (old('category_id') == $ctg->id)
-                                                                    
-                                                                <option value="{{ $ctg->id }}" selected>{{ $ctg->name }}</option>
-                                                            @else
-                                                                <option value="{{ $ctg->id }}">{{ $ctg->name }}</option>
-                                                            @endif
+                                                    <input placeholder="Ketua pelakasana pada kegiatan ini" type="text" name="price" id="price" autocomplete="price" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('price') }}" required>
 
-                                                        @endforeach
-
-                                                    </select>
-
-                                                    @if ($errors->has('category_id'))
-                                                        <p class="text-red-500 mb-3 text-sm">{{ $errors->first('category_id') }}</p>
+                                                    @if ($errors->has('price'))
+                                                        <p class="text-red-500 mb-3 text-sm">{{ $errors->first('price') }}</p>
                                                     @endif
 
                                                 </div>
@@ -94,7 +83,7 @@
 
                                                     <label for="slug" class="block mb-3 font-medium text-gray-700 text-md">Slug</label>
 
-                                                    <input placeholder="Samakan dengan title dan tanpa sepasi" type="text" name="slug" id="slug" autocomplete="slug" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('slug') }}" required>
+                                                    <input placeholder="Samakan dengan Tema dan tanpa sepasi" type="text" name="slug" id="slug" autocomplete="slug" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('slug') }}" required>
 
                                                     @if ($errors->has('slug'))
                                                         <p class="text-red-500 mb-3 text-sm">{{ $errors->first('slug') }}</p>
@@ -104,7 +93,7 @@
 
                                                 <div class="col-span-6">
 
-                                                    <label for="description" class="block mb-3 font-medium text-gray-700 text-md">Deskripsi Bootcamp</label>
+                                                    <label for="description" class="block mb-3 font-medium text-gray-700 text-md">Deskripsi </label>
 
                                                     {{-- <input placeholder="Jelaskan Service apa yang kamu tawarkan?" type="text" name="description" id="description" autocomplete="description" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('description') }}" required>
 
@@ -144,7 +133,8 @@
 
                                                 </div>
 
-                                                <div class="col-span-6">
+                                                {{-- materi --}}
+                                                {{-- <div class="col-span-6">
 
                                                     <label for="advantage-service" class="block mb-2 font-medium text-gray-700 text-md">Materi Bootcamp</label>
                                                     
@@ -164,64 +154,51 @@
                                                         Tambahkan Materi +
                                                     </button>
 
-                                                </div>
+                                                </div> --}}
+
                                                 <div class="col-span-6">
 
-                                                    <label for="advantage-service" class="block mb-2 font-medium text-gray-700 text-md">Key Point Bootcamp</label>
+                                                    <label for="advantage-service" class="block mb-2 font-medium text-gray-700 text-md">Key Point Kegiatan</label>
                                                     
                                                     <p class="block mb-3 text-sm text-gray-700">
-                                                        Hal apa aja yang didapakan dari Bootcamp ini?
+                                                        Pengalaman apa aja yang didapakan dari Kegiatan ini?
                                                     </p>
 
-                                                    <input placeholder="Keunggulan Service 1" type="text" name="advantage-service[]" id="advantage-service" autocomplete="advantage-service" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('advantage-service[]') }}" required>
+                                                    <input placeholder="Pengalaman 1" type="text" name="advantage-service[]" id="advantage-service" autocomplete="advantage-service" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('advantage-service[]') }}" required>
 
-                                                    <input placeholder="Keunggulan Service 2" type="text" name="advantage-service[]" id="advantage-service" autocomplete="advantage-service" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('advantage-service[]') }}" required>
+                                                    <input placeholder="Pengalaman 2" type="text" name="advantage-service[]" id="advantage-service" autocomplete="advantage-service" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('advantage-service[]') }}" required>
 
-                                                    <input placeholder="Keunggulan Service 3" type="text" name="advantage-service[]" id="advantage-service" autocomplete="advantage-service" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('advantage-service[]') }}" required>
+                                                    <input placeholder="Pengalaman 3" type="text" name="advantage-service[]" id="advantage-service" autocomplete="advantage-service" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('advantage-service[]') }}" required>
 
                                                     <div id="newServicesRow"></div>
 
                                                     <button type="button" class="inline-flex justify-center px-3 py-2 mt-3 text-xs font-medium text-gray-700 bg-gray-100 border border-transparent rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" id="addServicesRow">
-                                                        Tambahkan Keunggulan +
+                                                        Tambahkan Pengalaman +
                                                     </button>
 
                                                 </div>
 
-                                                <div class="col-span-6 -mb-6">
-                                                    <label for="estimation & revision" class="block mb-3 font-medium text-gray-700 text-md">Estimasi Bootcamp & Jumlah Revisi</label>
-                                                </div>
+                                                {{-- <div class="col-span-6 -mb-6">
+                                                    <label for="estimation & revision" class="block mb-3 font-medium text-gray-700 text-md">Ketua Pelaksana Kegiatan</label>
+                                                </div> --}}
 
                                                 <div class="col-span-6 sm:col-span-3">
 
-                                                    <select id="delivery_time" name="delivery_time" autocomplete="delivery_time" class="block w-full px-3 py-3 pr-10 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                                                    <label for="delivery_time" class="block mb-3 font-medium text-gray-700 text-md">Waktu Pelaksana</label>
 
-                                                        <option>Butuh Berapa hari Bootcamp ini selesai?</option>
-                                                        <option value="30">30 Hari</option>
-                                                        <option value="40">40 Hari</option>
-                                                        <option value="60">60 Hari</option>
-                                                        <option value="70">70 Hari</option>
-                                                        <option value="90">90 Hari</option>
-
-                                                    </select>
+                                                    <input placeholder="Waktu pelakasanaan pada kegiatan ini" type="date" name="delivery_time" id="delivery_time" autocomplete="delivery_time" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('delivery_time') }}" required>
 
                                                     @if ($errors->has('delivery_time'))
                                                         <p class="text-red-500 mb-3 text-sm">{{ $errors->first('delivery_time') }}</p>
                                                     @endif
 
                                                 </div>
-
+                                                
                                                 <div class="col-span-6 sm:col-span-3">
-                                                    <select id="revision_limit" name="revision_limit" autocomplete="revision_limit" class="block w-full px-3 py-3 pr-10 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
 
-                                                        <option>Maksimal Members pada setiap sesi Bootcamp kamu</option>
+                                                    <label for="revision_limit" class="block mb-3 font-medium text-gray-700 text-md">Tempat Pelaksanaan</label>
 
-                                                        <option value="20">20 Members</option>
-                                                        <option value="25">25 Members</option>
-                                                        <option value="30">30 Members</option>
-                                                        <option value="35">35 Members</option>
-                                                        <option value="40">40 Members</option>
-
-                                                    </select>
+                                                    <input placeholder="Tempat pelakasanaan pada kegiatan ini" type="text" name="revision_limit" id="revision_limit" autocomplete="revision_limit" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('revision_limit') }}" required>
 
                                                     @if ($errors->has('revision_limit'))
                                                         <p class="text-red-500 mb-3 text-sm">{{ $errors->first('revision_limit') }}</p>
@@ -231,19 +208,7 @@
 
                                                 <div class="col-span-6">
 
-                                                    <label for="price" class="block mb-3 font-medium text-gray-700 text-md">Harga Bootcamp Kamu</label>
-
-                                                    <input placeholder="Total Harga Service Kamu" type="number" name="price" id="price" autocomplete="price" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('price') }}" required>
-
-                                                    @if ($errors->has('price'))
-                                                        <p class="text-red-500 mb-3 text-sm">{{ $errors->first('price') }}</p>
-                                                    @endif
-
-                                                </div>
-
-                                                <div class="col-span-6">
-
-                                                    <label for="thumbnail" class="block mb-3 font-medium text-gray-700 text-md">Thumbnail Bootcamp Feeds</label>
+                                                    <label for="thumbnail" class="block mb-3 font-medium text-gray-700 text-md">Gallery Kegiatan</label>
 
                                                     <input placeholder="Thumbnail 1" type="file" name="thumbnail[]" id="thumbnail" autocomplete="thumbnail" class="block w-full py-3 pl-5 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm">
 
@@ -259,7 +224,8 @@
 
                                                 </div>
 
-                                                <div class="col-span-6">
+                                                {{-- detail bootcamp --}}
+                                                {{-- <div class="col-span-6">
 
                                                     <label for="advantage-user" class="block mb-3 font-medium text-gray-700 text-md">Detail Bootcamp</label>
 
@@ -274,13 +240,13 @@
                                                         Tambahkan Keunggulan +
                                                     </button>
 
-                                                </div>
+                                                </div> --}}
 
                                                 <div class="col-span-6">
 
-                                                    <label for="note" class="block mb-3 font-medium text-gray-700 text-md">Note <span class="text-gray-400">(Optional)</span></label>
+                                                    <label for="note" class="block mb-3 font-medium text-gray-700 text-md">Note </label>
 
-                                                    <input placeholder="Hal yang ingin disampaikan oleh kamu?" type="text" name="note" id="note" autocomplete="note" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('note') }}" required>
+                                                    <input placeholder="Hal yang ingin disampaikan oleh Pada Kegiatan ini?" type="text" name="note" id="note" autocomplete="note" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('note') }}" required>
 
                                                     @if ($errors->has('note'))
                                                         <p class="text-red-500 mb-3 text-sm">{{ $errors->first('note') }}</p>
@@ -290,11 +256,11 @@
 
                                                 <div class="col-span-6">
 
-                                                    <label for="tagline" class="block mb-3 font-medium text-gray-700 text-md">Benefits Bootcamp? 
+                                                    <label for="tagline" class="block mb-3 font-medium text-gray-700 text-md">Benefits Kegiatan? 
                                                         <span class="text-gray-400">(??)</span>
                                                     </label>
 
-                                                    <input placeholder="Hal apa yang akan di dapatkan dari Bootcamp?" type="text" name="tagline[]" id="tagline" autocomplete="tagline" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('tagline') }}" required>
+                                                    <input placeholder="Hal apa yang di dapatkan dari Kegiatan Ini?" type="text" name="tagline[]" id="tagline" autocomplete="tagline" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" value="{{ old('tagline') }}" required>
 
                                                     @if ($errors->has('tagline'))
                                                         <p class="text-red-500 mb-3 text-sm">
@@ -319,7 +285,7 @@
                                             </a>
 
                                             <button type="submit" class="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-green-600 border border-transparent rounded-lg shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" onclick="return confirm('Are you sure want to submit this data ?')">
-                                                Create Bootcamp
+                                                Create Gallery
                                             </button>
 
                                         </div>
@@ -342,7 +308,7 @@
             // add row
             $("#addMateriRow").click(function() {
                 var html = '';
-                html += '<input placeholder="Keunggulan Service" type="text" name="materi[]" id="advantage-service" autocomplete="advantage-service" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" required>';
+                html += '<input placeholder="Pengalaman yang didapatkan" type="text" name="materi[]" id="advantage-service" autocomplete="advantage-service" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" required>';
 
                 $('#newMateriRow').append(html);
             });
@@ -388,7 +354,7 @@
             // add row
             $("#addTaglineRow").click(function() {
                 var html = '';
-                html += '<input placeholder="Hal yang akan di dapatkan dari service?" type="text" name="tagline[]" id="tagline" autocomplete="tagline" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" required>';
+                html += '<input placeholder="Hal yang di dapatkan dari Kegiatan?" type="text" name="tagline[]" id="tagline" autocomplete="tagline" class="block w-full py-3 mt-1 border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" required>';
 
                 $('#newTaglineRow').append(html);
             });

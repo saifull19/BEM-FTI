@@ -82,20 +82,20 @@ class ServiceController extends Controller
         }
         
         // add to advantage service
-        foreach ($data['materi'] as $key => $value) {
-            $materi = new Materi;
-            $materi->service_id = $service->id;
-            $materi->title = $value;
-            $materi->save();
-        }
+        // foreach ($data['materi'] as $key => $value) {
+        //     $materi = new Materi;
+        //     $materi->service_id = $service->id;
+        //     $materi->title = $value;
+        //     $materi->save();
+        // }
 
         // add to avantage user 
-        foreach ($data['advantage-user'] as $key => $value) {
-            $advantage_user = new AdvantageUser;
-            $advantage_user->service_id = $service->id;
-            $advantage_user->advantage = $value;
-            $advantage_user->save();
-        }
+        // foreach ($data['advantage-user'] as $key => $value) {
+        //     $advantage_user = new AdvantageUser;
+        //     $advantage_user->service_id = $service->id;
+        //     $advantage_user->advantage = $value;
+        //     $advantage_user->save();
+        // }
 
         // add to thumbnail service "melakukan pengecekan terlebih dulu apakah file tersebut ada atau tidak"
         if ($request->hasfile('thumbnail')) {
@@ -148,9 +148,9 @@ class ServiceController extends Controller
         $tagline = Tagline::where('service_id', $service['id'])->get();
         $advantage_user = AdvantageUser::where('service_id', $service['id'])->get();
         $thumbnail_service = ThumbnailService::where('service_id', $service['id'])->get();
-        $category = Category::all();
+        // $category = Category::all();
 
-        return view('pages.dashboard.service.edit', compact('service','materi', 'advantage_service', 'advantage_user', 'thumbnail_service', 'tagline', 'category'));
+        return view('pages.dashboard.service.edit', compact('service','materi', 'advantage_service', 'advantage_user', 'thumbnail_service', 'tagline'));
     }
 
     /**
@@ -168,21 +168,21 @@ class ServiceController extends Controller
         $service->update($data);
 
         // update to materi 
-        foreach ($data['materis'] as $key => $value) {
-            $materi = Materi::find($key);
-            $materi->title = $value;
-            $materi->save();
-        }
+        // foreach ($data['materis'] as $key => $value) {
+        //     $materi = Materi::find($key);
+        //     $materi->title = $value;
+        //     $materi->save();
+        // }
 
         // add new materi 
-        if (isset($data['materi'])) {
-            foreach ($data['materi'] as $key => $value) {
-                $materi = new Materi;
-                $materi->service_id = $service['id'];
-                $materi->title = $value;
-                $materi->save();
-            }
-        }
+        // if (isset($data['materi'])) {
+        //     foreach ($data['materi'] as $key => $value) {
+        //         $materi = new Materi;
+        //         $materi->service_id = $service['id'];
+        //         $materi->title = $value;
+        //         $materi->save();
+        //     }
+        // }
 
         // update to advantage service
         foreach ($data['advantage-services'] as $key => $value) {
@@ -202,21 +202,21 @@ class ServiceController extends Controller
         }
 
         // update to advantage user
-        foreach ($data['advantage-users'] as $key => $value) {
-            $advantage_user = AdvantageUser::find($key);
-            $advantage_user->advantage = $value;
-            $advantage_user->save();
-        }
+        // foreach ($data['advantage-users'] as $key => $value) {
+        //     $advantage_user = AdvantageUser::find($key);
+        //     $advantage_user->advantage = $value;
+        //     $advantage_user->save();
+        // }
 
         // add new advantage user
-        if (isset($data['advantage-user'])) {
-            foreach ($data['advantage-user'] as $key => $value) {
-                $advantage_user = new AdvantageUser;
-                $advantage_user->service_id = $service['id'];
-                $advantage_user->advantage = $value;
-                $advantage_user->save();
-            }
-        }
+        // if (isset($data['advantage-user'])) {
+        //     foreach ($data['advantage-user'] as $key => $value) {
+        //         $advantage_user = new AdvantageUser;
+        //         $advantage_user->service_id = $service['id'];
+        //         $advantage_user->advantage = $value;
+        //         $advantage_user->save();
+        //     }
+        // }
 
         // updateto tagline
         foreach ($data['taglines'] as $key => $value) {

@@ -80,7 +80,7 @@
                             </svg>
                             <!-- Active Icons -->
                             
-                            <span class="ml-4">My Services</span>
+                            <span class="ml-4">My Gallery's</span>
                             <span class="inline-flex items-center justify-center px-3 py-2 ml-auto text-xs font-bold leading-none text-green-500 rounded-full bg-serv-green-badge"> . </span>
 
                         </a>
@@ -329,7 +329,7 @@
                             </svg>
                             <!-- Active Icons -->
                             
-                            <span class="ml-4">My Services</span>
+                            <span class="ml-4">My Gallery's</span>
                             <span class="inline-flex items-center justify-center px-3 py-2 ml-auto text-xs font-bold leading-none text-green-500 rounded-full bg-serv-green-badge">{{ auth()->user()->service()->count() }}</span>
                             
                         </a>
@@ -354,8 +354,8 @@
                             </svg>
                             <!-- Active Icons -->
                             
-                            <span class="ml-4">Materi Service</span>
-                            <span class="inline-flex items-center justify-center px-3 py-2 ml-auto text-xs font-bold leading-none text-green-500 rounded-full bg-serv-green-badge">.</span>
+                            <span class="ml-4">Struktur Organisasi</span>
+                            <span class="inline-flex items-center justify-center px-3 py-2 ml-auto text-xs font-bold leading-none text-green-500 rounded-full bg-serv-green-badge">{{ auth()->user()->materi()->count() }}</span>
 
                         </a>
                     </li>
@@ -382,14 +382,13 @@
                             </svg>
                             <!-- Active Icons -->
                             
-                            <span class="ml-4">My Orders</span>
+                            <span class="ml-4">Program Kerja</span>
                             <span class="inline-flex items-center justify-center px-3 py-2 ml-auto text-xs font-bold leading-none text-green-500 rounded-full bg-serv-green-badge">{{ auth()->user()->order_freelancer()->count() }}</span>
 
                         </a>
                     </li>
 
                     <li class="relative px-6 py-3">
-                        {{-- membuat kondisi aktif pada menu yang sedang dipilih --}}
                         @if (
                             request()->is('member/progress') ||
                             request()->is('member/progress/*') ||
@@ -403,9 +402,8 @@
 
                         <a class="inline-flex items-center w-full text-sm font-light transition-colors duration-150 hover:text-gray-800" href="{{ route('member.progress.index') }}">
                             
-                            <!-- Active Icons -->
                              <i class="fas fa-chalkboard-teacher fa-lg"></i>
-                            <span class="ml-4">Progress</span>
+                            <span class="ml-4">Events</span>
                             <span class="inline-flex items-center justify-center px-3 py-2 ml-auto text-xs font-bold leading-none text-green-500 rounded-full bg-serv-green-badge">{{ auth()->user()->order_freelancer()->count() }}</span>
 
                         </a>

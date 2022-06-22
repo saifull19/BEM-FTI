@@ -27,10 +27,12 @@ class StoreMateriRequest extends FormRequest
     public function rules()
     {
         return [
-            'service_id' => 'required|integer|max:100',
+            // 'service_id' => 'required|integer|max:100',
             'title' => 'required|string|max:255',
-            'tugas_materi' => 'string|max:250',
-            'url' => 'required|max:100'
+            // 'tugas_materi' => 'nullable|string|max:250',
+            'url' => 'required|string|max:5000',
+            
+            // 'description' => ['nullable', 'string', 'max:5000'],
         ];
     }
 }

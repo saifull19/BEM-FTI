@@ -24,7 +24,7 @@ class MateriController extends Controller
     public function index()
     {
         $service = Service::where('users_id', Auth::user()->id)->orderBy('created_at', 'desc')->first();
-        $materi = Materi::where('service_id', $service->id)->get();
+        $materi = Materi::where('users_id', Auth::user()->id)->orderBy('created_at', 'desc')->get();
         return view('pages.dashboard.materi.index', compact('materi', 'service'));
     }
 
@@ -47,17 +47,18 @@ class MateriController extends Controller
     public function store(StoreMateriRequest $request)
     {
         $data = $request->all();
+        $data['users_id'] = Auth::user()->id;
         // add to advantage service
-        $materi = Materi::create($data);
+        Materi::create($data);
 
 
 
-        foreach ($data['description'] as $key => $value) {
-            $detail_materi = new DetailMateri;
-            $detail_materi->materi_id = $materi->id;
-            $detail_materi->description = $value;
-            $detail_materi->save();
-        }
+        // foreach ($data['description'] as $key => $value) {
+        //     $detail_materi = new DetailMateri;
+        //     $detail_materi->materi_id = $materi->id;
+        //     $detail_materi->description = $value;
+        //     $detail_materi->save();
+        // }
 
         // toast untuk sweetalert
         toast()->success('Created Data has been success');
@@ -115,21 +116,21 @@ class MateriController extends Controller
 
         // update to materi 
         
-        foreach ($data['detail-materi'] as $key => $value) {
-            $detail_materi = new DetailMateri;
-            $detail_materi->materi_id = $materi['id'];
-            $detail_materi->description = $value;
-            $detail_materi->save();
-        }
-        if (isset($data['detail-materis'])) {
+        // foreach ($data['detail-materi'] as $key => $value) {
+        //     $detail_materi = new DetailMateri;
+        //     $detail_materi->materi_id = $materi['id'];
+        //     $detail_materi->description = $value;
+        //     $detail_materi->save();
+        // }
+        // if (isset($data['detail-materis'])) {
             
-            foreach ($data['detail-materis'] as $key => $value) {
+        //     foreach ($data['detail-materis'] as $key => $value) {
                 
-                $detail_materi = DetailMateri::find($key);
-                $detail_materi->description = $value;
-                $detail_materi->save();
-            }
-        }
+        //         $detail_materi = DetailMateri::find($key);
+        //         $detail_materi->description = $value;
+        //         $detail_materi->save();
+        //     }
+        // }
 
 
 

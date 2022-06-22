@@ -54,7 +54,7 @@
             </span>
             <span
                 class="text-serv-button inline-flex items-center leading-none text-md font-semibold">
-               Rp. {{ number_format($service->price) ?? '' }}
+                {{ $service->price ?? '' }}
             </span>
         </div>
     </div>

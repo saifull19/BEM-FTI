@@ -17,7 +17,7 @@ class isMember
     public function handle(Request $request, Closure $next)
     {
         // membuat middleware sendiri
-        if(!auth()->check() || auth()->user()->user_role_id !== '3') {
+        if(!auth()->check() || auth()->user()->user_role_id !== 3) {
             abort(403);
         }
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-      Profesional Development | UWHcamp
+      Program Kerja | BEM FTI
     </title>
     <meta name="description" content="Simple landind page" />
     <meta name="keywords" content="" />
@@ -31,7 +31,7 @@
         <div class="pl-4 flex items-center">
           <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="{{ route('index') }}">
             
-            <img src="{{ asset('/assets/images/logo.png') }}" alt="" class="ml-6">
+            <img style="width: 80px; height: 80px;" src="{{ asset('/assets/images/logo.png') }}" alt="" class="ml-6">
           
           </a>
         
@@ -51,28 +51,28 @@
           <ul class="list-reset lg:flex justify-center flex-1 items-center">
 
             <li class="mr-3">
-              <a href="{{ route('index') }}" class=" font-medium text-lg no-underline hover:text-underline inline-block py-2 px-4 {{ request()->is('/') ? ' font-bold ' : 'text-black hover:text-gray-400' }}">Home</a>
+              <a href="{{ route('index') }}" class=" font-medium text-lg no-underline hover:text-underline inline-block py-2 px-4 {{ request()->is('/') ? ' font-bold ' : 'text-black hover:text-gray-400' }}">BEM FTI</a>
               {{-- <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Active</a> --}}
             </li>
 
             <li class="mr-3">
-              <a href="{{ route('explore.landing') }}" class=" font-medium text-lg no-underline hover:text-underline inline-block py-2 px-4 {{ ($active === "explore") ? ' font-bold ' : 'text-black hover:text-gray-400' }}" >Bootcamp</a>
+              <a href="{{ route('explore.landing') }}" class=" font-medium text-lg no-underline hover:text-underline inline-block py-2 px-4 {{ ($active === "explore") ? ' font-bold ' : 'text-black hover:text-gray-400' }}" >Gallery</a>
               {{-- <a class="inline-block text-black no-underline hover:text-gray-400 hover:text-underline py-2 px-4" href="#">link</a> --}}
             </li>
             
             <li class="mr-3">
-              <a href="{{ route('explore.landing') }}" class=" font-medium text-lg no-underline hover:text-underline inline-block py-2 px-4 {{ ($active === "profesional") ? ' font-bold ' : 'text-black hover:text-gray-400' }}" >Professional Development</a>
+              <a href="{{ route('explore.landing') }}" class=" font-medium text-lg no-underline hover:text-underline inline-block py-2 px-4 {{ ($active === "profesional") ? ' font-bold ' : 'text-black hover:text-gray-400' }}" >Program Kerja</a>
               {{-- <a class="inline-block text-black no-underline hover:text-gray-400 hover:text-underline py-2 px-4" href="#">link</a> --}}
             </li>
           
             <li class="mr-3">
               
-              <a class="inline-block text-black no-underline hover:text-gray-400 font-lg text-lg hover:text-underline py-2 px-4" href="{{ route('corporate.landing') }}">Corporate</a>
+              <a class="inline-block text-black no-underline hover:text-gray-400 font-lg text-lg hover:text-underline py-2 px-4" href="{{ route('corporate.landing') }}">Organisasi</a>
             </li>
 
             <li class="mr-3">
               
-              <a class="inline-block text-black no-underline font-lg text-lg hover:text-gray-400 hover:text-underline py-2 px-4" href="{{ route('create') }}">About</a>
+              <a class="inline-block text-black no-underline font-lg text-lg hover:text-gray-400 hover:text-underline py-2 px-4" href="{{ route('create') }}">Profile</a>
             </li>
           </ul>
 

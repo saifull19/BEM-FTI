@@ -20,7 +20,7 @@
             href="{{ url('https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css') }}"
         />
 
-        <title>About | UWHcamp</title>
+        <title>Profile | BEM FTI</title>
 
         <style>
             #menu-toggle:checked + #menu {
@@ -252,21 +252,21 @@
                                     <a
                                         class="py-2 inline-block md:text-white md:hidden hover:text-gray-700 lg:block font-normal text-lg"
                                         href="{{ route('index') }}"
-                                        >Home</a>
+                                        >BEM FTI</a>
                                 </li>
 
                                 <li class="md:ml-4">
                                     <a
                                         class="py-2 inline-block md:text-white hover:text-gray-700 md:px-2 font-normal text-lg"
                                         href="{{ route('explore.landing') }}"
-                                        >Bootcamp</a>
+                                        >Gallery</a>
                                 </li>
 
                                 <li class="md:ml-4">
                                     <a
                                         class="py-2 inline-block md:text-white hover:text-gray-700 md:px-2 font-normal text-lg"
                                         href="{{ route('profesional.landing') }}"
-                                        >Professional Development</a
+                                        >Program Kerja</a
                                     >
                                 </li>
 
@@ -274,7 +274,7 @@
                                     <a
                                         class="py-2 inline-block hover:text-gray-700 md:text-white md:px-2 font-normal text-lg"
                                         href="{{ route('corporate.landing') }}"
-                                        >Corporate</a
+                                        >Organisasi</a
                                     >
                                 </li>
 
@@ -282,7 +282,7 @@
                                     <a
                                         class="py-2 inline-block hover:text-gray-700 text-lg md:text-white md:px-2 font-bold "
                                         href="{{ route('create') }}"
-                                        >About Us</a
+                                        >Profile</a
                                     >
                                 </li>
 

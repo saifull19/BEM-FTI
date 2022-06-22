@@ -69,10 +69,7 @@ class Service extends Model
         return $this->hasMany('App\Models\Order', 'service_id');
     }
     
-    public function materi()
-    {
-        return $this->hasMany('App\Models\Materi', 'service_id');
-    }
+    
     
     public function category()
     {

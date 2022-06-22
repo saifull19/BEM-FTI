@@ -15,7 +15,7 @@
                 <ol class="inline-flex p-0 list-none">
 
                     <li class="flex items-center">
-                        <a href="{{ route('explore.landing') }}" class="text-gray-400">Bootcamp</a>
+                        <a href="{{ route('explore.landing') }}" class="text-gray-400">Gallery</a>
                         
                         <svg class="w-3 h-3 mx-3 text-gray-400 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                             <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
@@ -64,13 +64,13 @@
                             <!-- The tabs navigation -->
                             <nav class="my-8" aria-label="navigation">
                                 <a class="inline-block px-8 py-2 my-2 mr-2 font-medium rounded-xl" :class="{ 'bg-serv-bg text-white': tab === 'description','bg-serv-services-bg text-serv-bg' : tab !== 'description' }" @click.prevent="tab = 'description'; window.location.hash = 'description'" href="#">Description</a>
-                                <a class="inline-block px-8 py-2 my-2 mr-2 font-medium rounded-xl" :class="{ 'bg-serv-bg text-white': tab === 'seller' ,'bg-serv-services-bg text-serv-bg' : tab !== 'seller' }" @click.prevent="tab = 'seller'; window.location.hash = 'seller'" href="#">About The Seller</a>
+                                <a class="inline-block px-8 py-2 my-2 mr-2 font-medium rounded-xl" :class="{ 'bg-serv-bg text-white': tab === 'seller' ,'bg-serv-services-bg text-serv-bg' : tab !== 'seller' }" @click.prevent="tab = 'seller'; window.location.hash = 'seller'" href="#">About The Gallery</a>
                                 <a class="inline-block px-8 py-2 my-2 mr-2 font-medium rounded-xl" :class="{ 'bg-serv-bg text-white': tab === 'reviews' ,'bg-serv-services-bg text-serv-bg' : tab !== 'reviews' }" @click.prevent="tab = 'reviews'; window.location.hash = 'reviews'" href="#">Reviews</a>
                             </nav>
 
                             <!-- The tabs content -->
                             <div x-show.transition.duration.500ms="tab === 'description'" class="leading-8 text-md">
-                                <h2 class="text-xl font-semibold">Develop Your  <span class="text-serv-button">Skills</span></h2>
+                                <h2 class="text-xl font-semibold">Kegiatan  <span class="text-serv-button">Pesan</span></h2>
                                 
                                 <div class="mt-4 mb-8 content-description">
                                 
@@ -80,7 +80,7 @@
                                     
                                 </div>
 
-                                <h3 class="my-4 text-lg font-semibold">Key Points?</h3>
+                                <h3 class="my-4 text-lg font-semibold">Pengalaman yang didapatkan</h3>
                                 
                                 <ul class="mb-5 list-check">
 
@@ -94,7 +94,7 @@
 
                                 </ul>
 
-                                <h3 class="my-4 text-lg font-semibold">Benefits Bootcamp</h3>
+                                <h3 class="my-4 text-lg font-semibold">Benefits Kegiatan</h3>
                             
                                 <div class="mb-8 skills">
 
@@ -121,7 +121,7 @@
                             </div>
                             
                             <div x-show.transition.duration.500ms="tab === 'seller'" class="leading-8 text-md">
-                                <h2 class="mb-4 text-xl font-semibold">About <span class="text-serv-button">Bootcamp</span></h2>
+                                <h2 class="mb-4 text-xl font-semibold">Description <span class="text-serv-button">Kegiatan : {{ $service->title ?? '' }}</span></h2>
                             
                                 <div class="grid md:grid-cols-12">
                                     <div class="flex items-center col-span-12 p-2 lg:col-span-6">
@@ -153,7 +153,7 @@
                                     </div>
                                 </div>
                             
-                                <h3 class="my-4 text-lg font-semibold">Description Bootcamp</h3>
+                                <h3 class="my-4 text-lg font-semibold">Description Kegiatan</h3>
                             
                                 <div class="mt-4 mb-8 content-description">
                                    
@@ -161,7 +161,7 @@
                                    
                                 </div>
                             
-                                <h3 class="my-4 text-lg font-semibold">Details Bootcamp</h3>
+                                {{-- <h3 class="my-4 text-lg font-semibold">Details Bootcamp</h3>
                             
                                 <ul class="mb-8 list-check">
 
@@ -170,20 +170,20 @@
                                         <li class="pl-10 flex my-2 "><img class="mr-3" src="{{ asset('/assets/images/ic_secure.svg') }}" alt="">{{ $item->advantage ?? '' }}</li>
                                         
                                     @empty
-                                        {{-- empty --}}
+                                        empty
                                     @endforelse
 
-                                </ul>
+                                </ul> --}}
 
                                 <hr class="border-serv-services-bg">
                              
                                 <p class="my-4 text-lg text-gray-400">
-                                    Joined Since {{ date("d F Y", strtotime($service->created_at)) ?? '' }}
+                                    Uploaded {{ date("d F Y", strtotime($service->created_at)) ?? '' }}
                                 </p>
                             </div>
                             
                             <div x-show.transition.duration.500ms="tab === 'reviews'">
-                                <h2 class="mb-4 text-xl font-semibold"><span class="text-serv-button">210</span> Happy Clients</h2>
+                                <h2 class="mb-4 text-xl font-semibold"><span class="text-serv-button">210</span> Happy Riview</h2>
                                 @include('components.landing.riview')
                                 @include('components.landing.riview')
                                 @include('components.landing.riview')
@@ -224,7 +224,7 @@
                                     <circle cx="12" cy="12" r="8" stroke="#082431" stroke-width="1.5" />
                                     <path d="M12 7V12L15 13.5" stroke="#082431" stroke-width="1.5" stroke-linecap="round" />
                                 </svg>
-                                {{ $service->delivery_time ?? '' }} Days Delivery
+                                {{ $service->delivery_time ?? '' }} 
                             </div>
                     
                             <div class="flex-1 text-sm font-medium text-center">
@@ -235,7 +235,7 @@
                                     <path d="M7 21.5L4.14142 18.6414C4.06332 18.5633 4.06332 18.4367 4.14142 18.3586L7 15.5" stroke="#082431" stroke-width="1.5" stroke-linecap="round" />
                                     <path d="M16 3L18.8586 5.85858C18.9367 5.93668 18.9367 6.06332 18.8586 6.14142L16 9" stroke="#082431" stroke-width="1.5" stroke-linecap="round" />
                                 </svg>
-                                {{ $service->revision_limit ?? '' }} Revision Limit
+                                {{ $service->revision_limit ?? '' }} 
                             </div>
                         </div>
                     
@@ -260,18 +260,18 @@
                             <table class="w-full mb-4">
                                 <tr>
                                     <td class="text-sm leading-7 text-serv-text">
-                                        Price starts from:
+                                        Ketua Pelaksana:
                                     </td>
             
                                     <td class="mb-4 text-xl font-semibold text-right text-serv-button">
-                                        {{ 'Rp. '.number_format($service->price) ?? '' }}
+                                        {{ $service->price ?? '' }}
                                     </td>
                                 </tr>
 
                             </table>
                         </div>
             
-                        <div class="px-4 pb-4 booking">
+                        {{-- <div class="px-4 pb-4 booking">
             
                             @auth
             
@@ -288,7 +288,7 @@
                             </a>
     
                                 @endguest
-                        </div>
+                        </div> --}}
                     </div>
                 </aside>
             </div>

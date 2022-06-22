@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-@section('title', 'HOME')
+@section('title', 'BEM FTI')
 
 
 
@@ -37,7 +37,7 @@
                     </div>
                     <!-- Right Column -->
                     <div  class="w-full lg:w-1/2 text-center lg:justify-start justify-center flex pr-0">
-                        <img style="margin-left: 250px" class="bottom-0 lg:block lg:right-24 md:right-16 sm:right-8 right-8 w-75"
+                        <img style="margin-left: 250px; height: 350px; margin-top: 90px;"   class="bottom-0 lg:block lg:right-24 md:right-16 sm:right-8 right-8"
                             src="{{ asset('/assets/unwaha.png') }}" alt="" />
                     </div>
                 </div>
@@ -135,7 +135,7 @@
            
                         <div class="flex pt-16 flex-col w-full">
                             <h1 class="md:text-4xl text-3xl tracking-wider font-semibold mb-10 text-medium-black">
-                                1100+ Lulusan UWHcamp Telah Bekerja Di</h1>
+                                Beasiswa Kuliah di Universitas KH. A. Wahab Hasbullah Jombang </h1>
                         </div>
            
                         <div class="flex justify-center ">
@@ -174,7 +174,7 @@
                 <div class="pt-16 pb-16 lg:pb-20 lg:pl-24 md:pl-16 sm:pl-8 pl-8 mx-auto">
                     <div class="flex flex-col w-full">
                         <h2 class="md:text-4xl text-3xl tracking-wider font-semibold mb-10 text-medium-black">
-                            Pilih Jalur Belajar Kamu</h2>
+                            Gallery Mahasiswa</h2>
                     </div>
            
                     <div class="flex overflow-x-scroll pb-10 hide-scroll-bar dragscroll -mx-3">
@@ -198,29 +198,29 @@
             <div class="py-10 lg:py-24 flex lg:flex-row flex-col items-center cta-bg">
                 <!-- Left Column -->
                 <div class="w-full lg:w-1/2 text-center justify-center flex lg:mb-0 mb-12">
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" data-lity>
-                        <img id="hero" src="{{ asset('/assets/images/video-placeholder.png') }}" alt="" class="p-5" />
+                    <a href="#" data-lity>
+                        <img style="border-radius: 10%" id="hero" src="{{ asset('/assets/images/lk.jpg') }}" alt="" class="shadow-lg p-5" />
                     </a>
                 </div>
                 <!-- Right Column -->
-                <div class="lg:w-1/2 w-full flex flex-col lg:items-start items-center lg:text-left text-center">
-                    <h2 class="md:text-4xl text-3xl font-semibold mb-10 lg:leading-normal text-medium-black">
-                        Konsultasi dengan.
+                <div class="lg:w-1/2 w-full flex flex-col lg:items-start items-center lg:text-left text-center ml-5">
+                    <h2 class="md:text-4xl text-3xl font-semibold mb-10 lg:leading-normal text-medium-black ">
+                        Struktur Organisasi
                             <br>
-                        Representatif UWHcamp.
+                        Kepengurusan 2022.
                     </h2>
            
                     <p class="text-lg leading-relaxed text-serv-text font-light mb-10 lg:mb-18">
-                        Kami yang membantumu memilih,
+                        Struktural Badan Eksekutif Mahasiswa Fakultas Teknologi Informasi Periode 2022, 
                         <br class="lg:block hidden">
-                        kamu yang menentukan. <br class="lg:block hidden">
+                          Badan Pengurus Harian Ketua Umum : Muhammad Izar ...<br class="lg:block hidden">
                          
                     </p>
            
                     <a
                         href="https://wa.me/081233285849?text=Hi, Saya ingin bertanya tentang Bootcamp di UWHcamp ini??"
                         class="bg-serv-button px-10 py-4 text-base text-white font-semibold rounded-xl cursor-pointer focus:outline-none tracking-wide">
-                        Hubungi Kami
+                        DETAIL
                     </a>
                 </div>
             </div>
@@ -230,7 +230,7 @@
                 <div class="pt-16 pb-16 lg:pb-20 lg:pl-24 md:pl-16 sm:pl-8 pl-8 mx-auto">
                     <div class="flex flex-col w-full text-center py-5">
                         <h2 class="md:text-4xl text-3xl tracking-wider font-semibold mb-10 text-medium-black">
-                            Success Stories</h2>
+                            Success Stories BEM FTI</h2>
                     </div>
            
                     <div class="flex overflow-x-scroll pb-10 hide-scroll-bar dragscroll -mx-3">
@@ -247,7 +247,7 @@
                                                 <p class="text-gray-900 font-semibold text-lg">Saiful Anam</p>
            
                                                 <p class="text-serv-text font-light text-md">
-                                                    Alumni Fullstack Developer
+                                                    Alumni BEM FTI Periode 2021
                                                 </p>
            
                                             </div>
@@ -283,7 +283,7 @@
                                                     </p>
                                                    
                                                     <p class="mt-3 text-gray-700 text-md leading-8">
-                                                    kelas yang mantap dan sangat jelas penjelasan flow alur nya sukses selalu UWHcamp!!!. 👍 
+                                                    Pengalaman yang begitu berharga setelah menjalani ketika menjadi keanggotaan BEM FTI!!!. 👍 
                                                     </p>
                                                     
                                                     <div class="mt-4 flex items-center">
@@ -309,7 +309,7 @@
                                                 <p class="text-gray-900 font-semibold text-lg">Makhrus Syaifullah</p>
                                                
                                                 <p class="text-serv-text font-light text-md">
-                                                    Alumni Fullsatck Developer
+                                                    Alumni BEM FTI Periode 2021
                                                 </p>
                                             </div>
                                         </div>
@@ -343,7 +343,7 @@
                                                     </p>
                                               
                                                     <p class="mt-3 text-gray-700 text-md leading-8">
-                                                    Kelas yang sangat bermanfaat dan ilmu up-to-date dan yang paling penting biayanya terjangkau. 👍 
+                                                    Pengalaman yang sangat bermanfaat dan  yang paling penting sangat berkesan. 👍 
                                                     </p>
                                                
                                                     <div class="mt-4 flex items-center">
@@ -370,7 +370,7 @@
                                                 <p class="text-gray-900 font-semibold text-lg">Muhammad Rifki</p>
                                      
                                                 <p class="text-serv-text font-light text-md">
-                                                    Alumni Fullstack Developer
+                                                    Alumni BEM FTI Periode 2021
                                                 </p>
                                             </div>
                                         </div>
@@ -405,7 +405,7 @@
                                                     </p>
                                      
                                                     <p class="mt-3 text-gray-700 text-md leading-8">
-                                                    Kelas yang paling recommended pokoknya buat investasi ilmu di era revolusi industri 4.0. 👍 
+                                                    Pengalaman yang paling berkesan pokoknya buat pembelajaran hidup kedepanya. 👍 
                                                     </p>
                                      
                                                     <div class="mt-4 flex items-center">
@@ -432,7 +432,7 @@
                                                 <p class="text-gray-900 font-semibold text-lg">Riska Wahyuni</p>
                                     
                                                 <p class="text-serv-text font-light text-md">
-                                                    Alumni Fullstack Developer
+                                                    Alumni BEM FTI Periode 2021
                                                 </p>
                                             </div>
                                         </div>
@@ -467,7 +467,7 @@
                                                     </p>
                                     
                                                     <p class="mt-3 text-gray-700 text-md leading-8">
-                                                    Mentornya keren cara menyampaikan setiap materinya juga detail dan mudah dipahami. 👍 
+                                                    Ketua BEM nya keren cara menyampaikan setiap gagasan, ide juga detail dan mudah dipahami. 👍 
                                                     </p>
                                     
                                                     <div class="mt-4 flex items-center">
@@ -494,7 +494,7 @@
                                                 <p class="text-gray-900 font-semibold text-lg">Ulfi Nur Izzah</p>
                                           
                                                 <p class="text-serv-text font-light text-md">
-                                                    Alumni Fullstack Developer
+                                                    Alumni BEM FTI Periode 2021
                                                 </p>
                                             </div>
                                         </div>
@@ -529,7 +529,7 @@
                                                     </p>
                                       
                                                     <p class="mt-3 text-gray-700 text-md leading-8">
-                                                    penjelasan yang sangat baik, saya pernah menggunakan hampir semuanya pada saat magang sebagai frontend,success slalu UWHcamp 👍 
+                                                    penjelasan yang sangat baik, saya pernah menggunakan hampir semuanya pada saat berorganisasi sebagai frontend,success slalu BEM FTI 👍 
                                                     </p>
                                       
                                                     <div class="mt-4 flex items-center">

@@ -134,4 +134,14 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Models\UserRole', 'user_role_id', 'id');
     }
+
+    public function materi()
+    {
+        return $this->hasMany('App\Models\Materi', 'users_id');
+    }
+
+    public function program()
+    {
+        return $this->hasMany('App\Models\ProgramKerja', 'users_id');
+    }
 }

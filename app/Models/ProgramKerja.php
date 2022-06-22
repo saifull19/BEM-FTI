@@ -5,12 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
+
 use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Activitylog\LogOptions;
 
 use Auth;
 
-class Materi extends Model
+class ProgramKerja extends Model
 {
     use HasFactory, LogsActivity;
 
@@ -25,7 +27,7 @@ class Materi extends Model
 
     public function getActivitylogOptions(): LogOptions
     {
-        return LogOptions::defaults()->useLogName(Auth::user()->name)->logOnly(['title'])->setDescriptionForEvent(fn(string $eventName) => "This Materi has been {$eventName}");
+        return LogOptions::defaults()->useLogName(Auth::user()->name)->logOnly(['devisi'])->setDescriptionForEvent(fn(string $eventName) => "This Program Kerja has been {$eventName}");
         
     }
 
@@ -37,19 +39,10 @@ class Materi extends Model
     
 
     // menjadi objeck relationship
-    public function akses_materi()
+    public function detail_program()
     {
-        return $this->hasMany('App\Models\AksesMateri', 'materi_id');
+        return $this->hasMany('App\Models\DetailProgramKerja', 'devisi_id');
     }
     
-    // menjadi objeck relationship
-    public function detail_materi()
-    {
-        return $this->hasMany('App\Models\DetailMateri', 'materi_id');
-    }
-    // menjadi objeck relationship
-    public function tugas_materi()
-    {
-        return $this->hasMany('App\Models\TugasMateri', 'materi_id');
-    }
+    
 }
