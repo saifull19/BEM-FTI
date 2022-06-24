@@ -76,9 +76,9 @@ class MateriController extends Controller
         // $service = Service::where('id', $id)->first();
         
         // $materi = Materi::where('id', $materi)->get();
-        $detail_materi = DetailMateri::where('materi_id', $materi['id'])->get();
+        // $detail_materi = DetailMateri::where('materi_id', $materi['id'])->get();
 
-        return view('pages.dashboard.materi.detail', compact('materi', 'detail_materi'));
+        return view('pages.dashboard.materi.detail', compact('materi'));
     }
 
     /**

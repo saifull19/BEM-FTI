@@ -16,6 +16,7 @@ use App\Http\Controllers\Dashboard\Admin\ServicController;
 use App\Http\Controllers\Dashboard\Admin\WebinarController;
 
 // member (dashboard)
+use App\Http\Controllers\Dashboard\EventController;
 use App\Http\Controllers\Dashboard\MemberController;
 use App\Http\Controllers\Dashboard\MateriController;
 use App\Http\Controllers\Dashboard\MyOrderController;
@@ -101,6 +102,9 @@ Route::group(['prefix' => 'member', 'as' => 'member.', 'middleware' => ['auth:sa
     Route::resource('program', ProgramKerjaController::class);
 
     Route::resource('detail', DetailProgramKerjaController::class);
+    
+    // webinar
+    Route::resource('event', EventController::class);
     
     // dashboard
     Route::resource('dashboard', MemberController::class);
