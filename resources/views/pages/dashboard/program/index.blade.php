@@ -13,7 +13,7 @@
                         <div class="col-span-8">
 
                             <h2 class="mt-8 mb-1 text-2xl font-semibold text-gray-700">
-                                My Struktural Organisasi
+                                Program Kerja Organisasi
                             </h2>
                             
                             <p class="text-sm text-gray-400">
@@ -25,7 +25,7 @@
                             <div class="relative mt-0 md:mt-6">
 
                                 <a href="{{ route('member.program.create') }}" class="inline-block px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-button">
-                                    + Add Struktural Organisasi
+                                    + Add Program Kerja
                                 </a>
 
                             </div>
@@ -40,7 +40,7 @@
                                 <table class="w-full" aria-label="Table">
                                     
                                     <thead>
-                                        <tr class="text-sm font-normal text-left text-gray-900 border-b border-b-gray-600">
+                                        <tr class="font-medium text-left text-gray-900 border-b border-b-gray-600">
                                             {{-- <th class="py-4" scope="">ID</th> --}}
                                             {{-- <th class="py-4 pr-5" scope="">Service ID</th> --}}
                                             <th class="py-4 text-center" scope="">Devisi</th>

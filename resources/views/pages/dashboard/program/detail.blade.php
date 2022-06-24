@@ -45,13 +45,13 @@
                                                     <!-- The tabs content -->
                                                     <div class="leading-8 text-md">
 
-                                                        <h2 class="text-xl font-semibold"><span class="text-serv-button"> {{ $program->devisi ?? '' }}</span></h2>
+                                                        <h2 class="text-xl font-semibold"><span class="text-serv-button">Devisi {{ $program->devisi ?? '' }}</span></h2>
 
                                                         
                                                             
                                                             <div class="mt-4 mb-8 content-description">
                                                                 <p>
-                                                                    {{ $program->koordinator ?? '' }}
+                                                                  Koordinator  {{ $program->koordinator ?? '' }}
                                                                 </p>
                                                             </div>
                                                             
@@ -96,7 +96,7 @@
                                                     
                                                             
                                                             <a  class="font-medium text-center text-black">
-                                                                -
+                                                                {{ $mtr->status ?? '' }}
                                                             </a>
 
                                                 </td>
@@ -106,7 +106,7 @@
                                                          <i class="fas fa-eye fa-lg"></i>
                                                     </a> --}}
                                                     
-                                                    <a href="{{ route('member.program.edit', $mtr->id) }}" class="px-3 py-2 mt-2 text-green-500 hover:text-gray-800">
+                                                    <a href="{{ route('member.detail.edit', $mtr->id) }}" class="px-3 py-2 mt-2 text-green-500 hover:text-gray-800">
                                                         <i class="fas fa-edit fa-lg"></i> 
                                                         
                                                     </a>

@@ -61,7 +61,7 @@
                                                 </td> --}}
 
                                                 <td class=" px-1 py-5">
-                                                    <div class="flex items-center text-sm">
+                                                    <div class="flex items-center font-medium">
                                                         <div>
                                                             
                                                             <a  class="font-medium text-black">
@@ -76,7 +76,7 @@
                                                     {{ $mtr->tugas_materi ?? '' }}
                                                 </td> --}}
 
-                                                <td class="px-1 py-5 ">
+                                                <td class="px-1 py-5 text-center">
                                                     <p class="py-2 mt-2 font-medium text-center">
                                                         {!! $mtr->url ?? '' !!}
                                                     </p>

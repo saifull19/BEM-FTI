@@ -38,7 +38,7 @@
                                 <table class="w-full" aria-label="Table">
                                     
                                     <thead>
-                                        <tr class="text-sm font-normal text-left text-gray-900 border-b border-b-gray-600">
+                                        <tr class="font-medium text-left text-gray-900 border-b border-b-gray-600">
                                             <th class="py-4" scope="">Event Details</th>
                                             <th class="py-4" scope="">Instructors</th>
                                             <th class="py-4" scope="">Kuota</th>
@@ -53,7 +53,7 @@
                                             
                                             <tr class="text-gray-700 border-b">
                                                 <td class="w-2/6 px-1 py-5">
-                                                    <div class="flex items-center text-sm">
+                                                    <div class="flex items-center font-medium">
                                                         <div class="relative w-10 h-10 mr-3 rounded-full md:block">
 
                                                             @if (isset($wbn->photo) != null )
@@ -79,19 +79,19 @@
                                                     </div>
                                                 </td>
 
-                                                <td class="px-1 py-5 text-sm">
+                                                <td class="px-1 py-5 font-medium">
                                                     {{ $wbn->instructors ?? '' }}
                                                 </td>
 
-                                                <td class="px-1 py-5 text-sm">
+                                                <td class="px-1 py-5 font-medium">
                                                     {{ $wbn->kuota ?? '' }} Orang
                                                 </td>
 
-                                                <td class="px-1 py-5 text-sm">
+                                                <td class="px-1 py-5 font-medium">
                                                     {{ $wbn->tanggal ?? '' }} | {{ $wbn->waktu ?? '' }}
                                                 </td>
                                                 
-                                                <td class="px-1 py-5 text-sm">
+                                                <td class="px-1 py-5 font-medium">
                                                     <a href="{{ route('member.event.show', $wbn['id']) }}" class="py-2 mt-2 text-serv-yellow hover:text-gray-800">
                                                         <i class="fas fa-eye fa-lg"></i>
                                                     </a>

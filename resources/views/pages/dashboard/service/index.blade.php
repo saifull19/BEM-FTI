@@ -38,7 +38,7 @@
                                 <table class="w-full" aria-label="Table">
                                     
                                     <thead>
-                                        <tr class="text-sm font-normal text-left text-gray-900 border-b border-b-gray-600">
+                                        <tr class=" font-normal text-left text-gray-900 border-b border-b-gray-600">
                                             <th class="py-4" scope="">ID</th>
                                             <th class="py-4" scope="">Gallery Details</th>
                                             <th class="py-4" scope="">Ketua Pelaksana</th>
@@ -56,7 +56,7 @@
                                             <tr class="text-gray-700 border-b">
                                                 <td class="font-bold">{{ $service->id }}</td>
                                                 <td class="w-2/6 px-1 py-5">
-                                                    <div class="flex items-center text-sm">
+                                                    <div class="flex items-center font-medium">
                                                         <div class="relative w-10 h-10 mr-3 rounded-full md:block">
 
                                                             @if (isset($service->thumbnail_service[0]->thumbnail) != null )
@@ -82,22 +82,22 @@
                                                     </div>
                                                 </td>
 
-                                                <td class="px-1 py-5 text-sm">
+                                                <td class="px-1 py-5 font-medium">
                                                     {{ $service->price ?? '' }}
                                                 </td>
 
-                                                <td class="px-1 py-5 text-sm">
+                                                <td class="px-1 py-5 font-medium">
                                                     {{ $service->delivery_time ?? '' }}
                                                 </td>
 
                                                 
-                                                <td class="px-1 py-5 text-sm">
+                                                <td class="px-1 py-5 font-medium">
                                                     {{ $service->revision_limit ?? '' }}
                                                 </td>
 
                                                 
                                                 
-                                                <td class="px-1 py-5 text-sm">
+                                                <td class="px-1 py-5 font-medium">
                                                     <a href="{{ route('member.service.show', $service->slug) }}" class="py-2 mt-2 text-serv-yellow hover:text-gray-800">
                                                         <i class="fas fa-eye fa-lg"></i>
                                                     </a>
@@ -137,7 +137,7 @@
                 <h2 class="mt-8 mb-1 text-2xl font-semibold text-gray-700">
                     There is No Requests Yet
                 </h2>
-                <p class="text-sm text-gray-400">
+                <p class=" text-gray-400">
                     It seems that you haven’t provided any gallery. <br>
                     Let’s create your first gallery!
                 </p>

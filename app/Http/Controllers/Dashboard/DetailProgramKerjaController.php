@@ -56,9 +56,11 @@ class DetailProgramKerjaController extends Controller
      * @param  \App\Models\DetailProgramKerja  $detailProgramKerja
      * @return \Illuminate\Http\Response
      */
-    public function edit(DetailProgramKerja $detailProgramKerja)
+    public function edit($id)
     {
-        //
+        $detail = DetailProgramKerja::where('id', $id)->first();
+        // $webinarStatus = WebinarStatus::all();
+        return view('pages.dashboard.detail-program.edit', compact('detail'));
     }
 
     /**
@@ -68,9 +70,31 @@ class DetailProgramKerjaController extends Controller
      * @param  \App\Models\DetailProgramKerja  $detailProgramKerja
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, DetailProgramKerja $detailProgramKerja)
+    public function update(Request $request, $id)
     {
-        //
+         $rules = [
+            'program_kerja' => 'required|string|max:255',
+            'status' => 'required|string|max:255'
+        ];
+
+        $validatedData = $request->validate($rules);
+
+        DetailProgramKerja::where('id', $id)->update($validatedData);
+        
+        // Add to thumbnail service
+        // if ($request->hasfile('thumbnail')) {
+        //     foreach ($request->file('thumbnail') as $file) {
+        //         $path = $file->store('assets/webinar/thumbnail', 'public');
+
+        //         $thumbnail_webinar = new ThumbnailWebinar;
+        //         $thumbnail_webinar->webinar_id = $webinar['id'];
+        //         $thumbnail_webinar->thumbnail = $path;
+        //         $thumbnail_webinar->save();
+        //     }
+        // }
+
+        toast()->success('Update has been succes');
+        return redirect()->route('member.program.index');
     }
 
     /**
