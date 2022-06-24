@@ -130,9 +130,16 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Service $service)
     {
-        return abort('404');
+        $advantage_service = AdvantageService::where('service_id', $service['id'])->get();
+        // $materi = Materi::where('service_id', $service['id'])->get();
+        $tagline = Tagline::where('service_id', $service['id'])->get();
+        // $advantage_user = AdvantageUser::where('service_id', $service['id'])->get();
+        $thumbnail = ThumbnailService::where('service_id', $service['id'])->get();
+        // $category = Category::all();
+
+        return view('pages.dashboard.service.detail', compact('service', 'advantage_service', 'tagline', 'thumbnail'));
     }
 
     /**
@@ -143,14 +150,14 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
-        $materi = Materi::where('service_id', $service['id'])->get();
         $advantage_service = AdvantageService::where('service_id', $service['id'])->get();
+        // $materi = Materi::where('service_id', $service['id'])->get();
         $tagline = Tagline::where('service_id', $service['id'])->get();
-        $advantage_user = AdvantageUser::where('service_id', $service['id'])->get();
+        // $advantage_user = AdvantageUser::where('service_id', $service['id'])->get();
         $thumbnail_service = ThumbnailService::where('service_id', $service['id'])->get();
         // $category = Category::all();
 
-        return view('pages.dashboard.service.edit', compact('service','materi', 'advantage_service', 'advantage_user', 'thumbnail_service', 'tagline'));
+        return view('pages.dashboard.service.edit', compact('service', 'advantage_service', 'tagline', 'thumbnail_service'));
     }
 
     /**

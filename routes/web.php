@@ -17,13 +17,16 @@ use App\Http\Controllers\Dashboard\Admin\WebinarController;
 
 // member (dashboard)
 use App\Http\Controllers\Dashboard\MemberController;
+use App\Http\Controllers\Dashboard\MateriController;
 use App\Http\Controllers\Dashboard\MyOrderController;
 use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\RequestController;
 use App\Http\Controllers\Dashboard\ServiceController;
 use App\Http\Controllers\Dashboard\MyClassController;
 use App\Http\Controllers\Dashboard\ProgressController;
-use App\Http\Controllers\Dashboard\MateriController;
+use App\Http\Controllers\Dashboard\ProgramKerjaController;
+use App\Http\Controllers\Dashboard\DetailProgramKerjaController;
+use App\Http\Controllers\Dashboard\StatusProgramController;
 use App\Http\Controllers\UserController;
 
 // model spatie
@@ -70,9 +73,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth', 'v
     // order
     Route::resource('order', OrderController::class);
     
+    
     // webinar
     Route::resource('webinar', WebinarController::class);
-
+    
     // mentor
     Route::resource('mentor', MentorController::class);
     
@@ -86,10 +90,17 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth', 'v
     Route::get('delete_photo', [ProfilController::class, 'delete'])->name('delete.photo.profile');
     Route::get('editt', [ProfilController::class, 'editt'])->name('profile.editt');
     Route::resource('profil', ProfilController::class);
+
+    
 });
 
 // route group yang menggunakan middleware
 Route::group(['prefix' => 'member', 'as' => 'member.', 'middleware' => ['auth:sanctum', 'verified']], function() {
+    
+    // order
+    Route::resource('program', ProgramKerjaController::class);
+
+    Route::resource('detail', DetailProgramKerjaController::class);
     
     // dashboard
     Route::resource('dashboard', MemberController::class);

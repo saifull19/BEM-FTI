@@ -4,7 +4,7 @@
 
 @section('content')
 
-@if (count($materi))
+@if (count($program))
 
     <main class="h-full overflow-y-auto">
 
@@ -13,18 +13,18 @@
                         <div class="col-span-8">
 
                             <h2 class="mt-8 mb-1 text-2xl font-semibold text-gray-700">
-                                My Struktural Organisani
+                                My Struktural Organisasi
                             </h2>
                             
                             <p class="text-sm text-gray-400">
-                                {{ $materi->count() }} All
+                                {{ $program->count() }} All
                             </p>
                         </div>
                         
                         <div class="col-span-4 lg:text-right">
                             <div class="relative mt-0 md:mt-6">
 
-                                <a href="{{ route('member.materi.create') }}" class="inline-block px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-button">
+                                <a href="{{ route('member.program.create') }}" class="inline-block px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-button">
                                     + Add Struktural Organisasi
                                 </a>
 
@@ -43,16 +43,17 @@
                                         <tr class="text-sm font-normal text-left text-gray-900 border-b border-b-gray-600">
                                             {{-- <th class="py-4" scope="">ID</th> --}}
                                             {{-- <th class="py-4 pr-5" scope="">Service ID</th> --}}
-                                            <th class="py-4 text-center" scope="">Title</th>
-                                            {{-- <th class="py-4 text-center pl-5" scope="">Tugas Materi</th> --}}
-                                            <th class="py-4 text-center" scope="">Struktural</th>
+                                            <th class="py-4 text-center" scope="">Devisi</th>
+                                            {{-- <th class="py-4 text-center pl-5" scope="">Tugas program</th> --}}
+                                            <th class="py-4 text-center" scope="">Koordinator</th>
+                                            <th class="py-4 text-center" scope="">Program Kerja</th>
                                             <th class="py-4 text-center" scope="">Action</th>
                                         </tr>
                                     </thead>
 
                                     <tbody class="bg-white">
 
-                                        @forelse ($materi as $key => $mtr)
+                                        @forelse ($program as $key => $mtr)
                                             
                                             <tr class="text-gray-700 border-b">
 
@@ -60,38 +61,38 @@
                                                     {{ $mtr->users_id ?? '' }}
                                                 </td> --}}
 
-                                                <td class=" px-1 py-5">
-                                                    <div class="flex items-center text-sm">
-                                                        <div>
+                                                <td class=" px-1 py-5 text-center">
+                                                    
                                                             
-                                                            <a  class="font-medium text-black">
-                                                                {{ $mtr->title ?? '' }}
+                                                            <a  class="font-medium text-center text-black">
+                                                                {{ $mtr->devisi ?? '' }}
                                                             </a>
 
-                                                        </div>
-                                                    </div>
                                                 </td>
 
                                                 {{-- <td class="px-1 py-5 text-center  text-sm">
-                                                    {{ $mtr->tugas_materi ?? '' }}
+                                                    {{ $mtr->tugas_program ?? '' }}
                                                 </td> --}}
 
                                                 <td class="px-1 py-5 ">
                                                     <p class="py-2 mt-2 font-medium text-center">
-                                                        {!! $mtr->url ?? '' !!}
+                                                        {!! $mtr->koordinator ?? '' !!}
                                                     </p>
+                                                </td>
+                                                <td class="px-1 py-5 text-center">
+                                                    <a href="{{ route('member.program.show', $mtr['id']) }}" class="py-2 mt-2 text-serv-yellow hover:text-gray-800">
+                                                        Lihat <i class="fas fa-eye fa-lg"></i>
+                                                    </a>
                                                 </td>
 
                                                 <td class="pl-5 px-1 py-5 text-sm text-center">
-                                                    <a href="{{ route('member.materi.show', $mtr['id']) }}" class="py-2 mt-2 text-serv-yellow hover:text-gray-800">
-                                                        <i class="fas fa-eye fa-lg"></i>
-                                                    </a>
-                                                    <a href="{{ route('member.materi.edit', $mtr->id) }}" class="px-3 py-2 mt-2 text-green-500 hover:text-gray-800">
+                                                    
+                                                    <a href="{{ route('member.program.edit', $mtr->id) }}" class="px-3 py-2 mt-2 text-green-500 hover:text-gray-800">
                                                         <i class="fas fa-edit fa-lg"></i>
                                                         
                                                     </a>
 
-                                                    <form class="inline" action="{{ route('member.materi.destroy', $mtr->id) }}" method="post" >
+                                                    <form class="inline" action="{{ route('member.program.destroy', $mtr['id']) }}" method="post" >
                                                     @method('delete')
                                                     @csrf
                                                     <button class=" py-2 mt-2 text-red-500 hover:text-gray-800" onclick="return confirm('Are you sure?')">
@@ -128,8 +129,8 @@
                 </p>
 
                 <div class="relative mt-0 md:mt-6">
-                    <a href="{{ route('member.materi.create') }}" class="px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-button">
-                        + Add Struktur Organisasi
+                    <a href="{{ route('member.program.create') }}" class="px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-button">
+                        + Add Program Kerja
                     </a>
                 </div>
             </div>

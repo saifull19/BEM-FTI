@@ -98,7 +98,7 @@
                                                 
                                                 
                                                 <td class="px-1 py-5 text-sm">
-                                                    <a href="{{ route('detail.landing', $service->slug) }}" class="py-2 mt-2 text-serv-yellow hover:text-gray-800">
+                                                    <a href="{{ route('member.service.show', $service->slug) }}" class="py-2 mt-2 text-serv-yellow hover:text-gray-800">
                                                         <i class="fas fa-eye fa-lg"></i>
                                                     </a>
                                                     <a href="{{ route('member.service.edit', $service['slug']) }}" class="px-3 py-2 mt-2 text-green-500 hover:text-gray-800">

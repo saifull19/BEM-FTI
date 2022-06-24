@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\Http\Controllers\Controller;
 use App\Models\DetailProgramKerja;
 use Illuminate\Http\Request;
 
@@ -78,8 +79,12 @@ class DetailProgramKerjaController extends Controller
      * @param  \App\Models\DetailProgramKerja  $detailProgramKerja
      * @return \Illuminate\Http\Response
      */
-    public function destroy(DetailProgramKerja $detailProgramKerja)
+    public function destroy(DetailProgramKerja $detail)
     {
-        //
+        // ProgramKerja::destroy($programKerja->id);
+        DetailProgramKerja::destroy($detail->id);
+
+        toast()->success('Deleted has been success');
+        return redirect()->route('member.program.index');
     }
 }

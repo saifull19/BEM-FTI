@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 
 
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Activitylog\LogOptions;
 
@@ -14,11 +15,12 @@ use Auth;
 
 class ProgramKerja extends Model
 {
-    use HasFactory, LogsActivity;
+    use SoftDeletes,  LogsActivity;
 
     protected $dates = [
         'updated_at',
-        'created_at'
+        'created_at',
+        'deleted_at'
     ];
 
     protected $guarded = [
