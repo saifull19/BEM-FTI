@@ -505,15 +505,14 @@
                                 <rect x="17" y="11" width="1.4" height="10" rx="0.7" transform="rotate(90 17 11)" fill="#082431" />
                             </svg>
                             
-                            <span class="ml-4">My Request</span>
+                            <span class="ml-4">My Gallery</span>
                             <span class="inline-flex items-center justify-center px-3 py-2 ml-auto text-xs font-bold leading-none text-green-500 rounded-full bg-serv-green-badge">{{ auth()->user()->order_buyer()->count() }}</span>
 
                         </a>
                     </li>
 
-                    <li class="relative px-6 py-3">
+                    {{-- <li class="relative px-6 py-3">
 
-                        {{-- membuat kondisi aktif pada menu yang sedang dipilih --}}
                         @if (
                             request()->is('member/class') ||
                             request()->is('member/class/*') ||
@@ -537,7 +536,7 @@
 
                         </a>
                     </li>
-
+ --}}
                     <li class="relative px-6 py-3">
 
                         {{-- membuat kondisi aktif pada menu yang sedang dipilih --}}
